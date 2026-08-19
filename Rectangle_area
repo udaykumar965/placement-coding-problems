@@ -1,0 +1,28 @@
+class Rect:
+    def __init__(self, l, b):
+        self.l = l
+        self.b = b
+
+    def display(self):
+        print(" =", self.l * self.b)
+
+
+print("Enter number of Rectangles:")
+n = int(input())
+
+rectangles = []
+
+for i in range(n):
+    print("Enter length of Rect", i + 1)
+    l = int(input())
+
+    print("Enter breadth of Rect", i + 1)
+    b = int(input())
+
+    rectangles.append(Rect(l, b))
+
+print("Let's see the area of all Rectangles:")
+
+for i in range(n):
+    print("Area of Rectangle", i + 1, end="")
+    rectangles[i].display()
